@@ -11,7 +11,7 @@ We will configure using the server IP address.
 
 ---
 
-# 1. Install Nginx
+## 1. Install Nginx
 
 ```bash
 sudo apt update
@@ -27,7 +27,7 @@ sudo systemctl start nginx
 
 ---
 
-# 2. Ensure Workers Are Running
+## 2. Ensure Workers Are Running
 
 Make sure these services are active:
 
@@ -47,7 +47,7 @@ Workers should be running on:
 
 ---
 
-# 3. Create Nginx Configuration
+## 3. Create Nginx Configuration
 
 Create a new site configuration:
 
@@ -95,7 +95,7 @@ Explanation:
 
 ---
 
-# 4. Enable Site
+## 4. Enable Site
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/tgfs /etc/nginx/sites-enabled/
@@ -109,7 +109,7 @@ sudo rm /etc/nginx/sites-enabled/default
 
 ---
 
-# 5. Test Configuration
+## 5. Test Configuration
 
 ```bash
 sudo nginx -t
@@ -130,7 +130,7 @@ sudo systemctl reload nginx
 
 ---
 
-# 6. Test Using Server IP
+## 6. Test Using Server IP
 
 Find your server IP:
 
@@ -154,23 +154,15 @@ If configured correctly, requests should be forwarded to your workers.
 
 ---
 
-# How Load Balancing Works Here
+## How Load Balancing Works Here
 
-User
-  ↓
-Nginx (Port 80)
-  ↓
-aiohttp_backend (least_conn)
-  ↓
-Workers 8080–8083
-  ↓
-Telegram
+User → Nginx (Port 80) → aiohttp_backend (least_conn) → Workers 8080–8083 → Telegram
 
 Nginx distributes traffic based on active connections.
 
 ---
 
-# Scaling Workers
+## Scaling Workers
 
 To add more workers:
 
@@ -194,7 +186,7 @@ sudo systemctl reload nginx
 
 ---
 
-# Troubleshooting
+## Troubleshooting
 
 ### 502 Bad Gateway
 

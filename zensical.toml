@@ -47,7 +47,8 @@ Copyright &copy; 2026 Deekshith SH
 nav = [
   {"Home" = "index.md"},
   {"Getting Started" = [
-    "getting-started/overview.md"
+    "getting-started/overview.md",
+    "getting-started/architecture.md"
   ]},
   {"Setup" = [
      "setup/system-requirements.md",
@@ -56,7 +57,14 @@ nav = [
      "setup/environment-variables.md",
      "setup/test-run.md",
      "setup/systemd-service.md",
-     "setup/nginx-reverse-proxy.md"
+     "setup/nginx-reverse-proxy.md",
+     "setup/domain-dns.md",
+     "setup/customization.md"
+  ]},
+  {"Customization" = [
+    "customization/index.md",
+    "customization/patches.md",
+    "customization/customize-replies.md"
   ]}
 ]
 

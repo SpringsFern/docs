@@ -1,31 +1,60 @@
-# TG-FileStream
+# Overview
 
-TG-FileStream is a high-performance Telegram file streaming backend.
+TG-FileStream (TGFS) is a Telegram-based file streaming backend.
 
-It allows efficient file delivery using:
-- aiohttp
-- Nginx reverse proxy
-- Worker-based scaling
-- Optional load balancing
+It allows users to:
 
----
-
-## Features
-
-- Large file support (30MB – 4GB)
-- Worker scaling
-- Nginx compatible
-- Production-ready deployment
+- Send files to a Telegram bot
+- Generate public download links
+- Stream large files efficiently
 
 ---
 
-## Deployment Overview
+## Core Purpose
 
-Deployment flow:
+TGFS is designed to:
 
-1. Install dependencies
-2. Configure environment
-3. Test locally
-4. Setup systemd
-5. Setup Nginx
-6. Configure DNS
+- Handle large file streaming
+- Scale using multiple workers
+- Integrate with reverse proxies
+- Operate behind Cloudflare
+- Support modular customization
+
+---
+
+## Key Features
+
+- Multi-worker architecture
+- systemd production deployment
+- Nginx load balancing
+- Cloudflare compatibility
+- Registry-based translation system
+- Patch-based extensibility
+- MongoDB / MySQL support
+
+---
+
+<!-- ## Why TGFS?
+
+Unlike simple Telegram bots, TGFS is built as:
+
+A scalable backend service.
+
+It separates:
+
+- Telegram client logic
+- HTTP streaming layer
+- Reverse proxy handling
+- Customization via patches
+
+--- -->
+
+## Intended Deployment
+
+TGFS is recommended to run on:
+
+- Linux VPS
+- Dedicated server
+- Cloud VM
+
+It is not intended for shared hosting environments.
