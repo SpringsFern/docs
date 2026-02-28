@@ -35,7 +35,7 @@ Understand the architecture and internal design of TGFS.
 ### ⚙️ Setup
 Step-by-step guide to deploy TGFS on a server.
 
-➡ [Setup Guide](setup/system-requirements.md)
+➡ [Setup Guide](setup/vps/system-requirements.md)
 
 ---
 

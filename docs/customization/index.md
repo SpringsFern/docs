@@ -34,7 +34,7 @@ Runtime Behavior
 
 Modify `.env` variables to change behavior.
 
-[Environment Variables](../setup/environment-variables/)
+[Environment Variables](../environment-variables/description.md)
 
 ### 2. Patch-Based
 

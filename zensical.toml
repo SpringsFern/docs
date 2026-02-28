@@ -51,20 +51,26 @@ nav = [
     "getting-started/architecture.md"
   ]},
   {"Setup" = [
-     "setup/system-requirements.md",
-     "setup/clone-repository.md",
-     "setup/python-environment.md",
-     "setup/environment-variables.md",
-     "setup/test-run.md",
-     "setup/systemd-service.md",
-     "setup/nginx-reverse-proxy.md",
-     "setup/domain-dns.md",
-     "setup/customization.md"
+    {"VPS" = [
+     "setup/vps/system-requirements.md",
+     "setup/vps/clone-repository.md",
+     "setup/vps/python-environment.md",
+     "setup/vps/environment-variables.md",
+     "setup/vps/test-run.md",
+     "setup/vps/systemd-service.md",
+     "setup/vps/nginx-reverse-proxy.md",
+     "setup/vps/workers-instance.md",
+     "setup/vps/domain-dns.md",
+     "setup/vps/customization.md"
+    ]}
   ]},
   {"Customization" = [
     "customization/index.md",
     "customization/patches.md",
     "customization/customize-replies.md"
+  ]},
+  {"Environment Variables" = [
+    "environment-variables/description.md"
   ]}
 ]
 

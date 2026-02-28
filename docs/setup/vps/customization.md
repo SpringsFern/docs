@@ -28,7 +28,7 @@ You can customize:
 
 See:
 
-➡ [`/customization/index.md`](../customization/index.md)
+➡ [`/customization/index.md`](../../customization/index.md)
 
 This section explains:
 
