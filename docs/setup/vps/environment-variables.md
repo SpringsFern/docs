@@ -14,16 +14,12 @@ Inside the project directory:
 nano .env
 ```
 
-Or:
-
-```bash
-touch .env
-```
-
 ---
 
 ## 2. Core & Application Environment Variables
 You can find list of required and optional Environment Variables at [environment-variables/description.md](../../environment-variables/description.md)
+
+You can use our [Interactive `.env` Builder](../../environment-variables/env-builder.md) to generate .env file content
 
 ??? info "Example `.env` File"
     ```env
