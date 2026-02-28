@@ -51,6 +51,7 @@ nav = [
     "getting-started/architecture.md"
   ]},
   {"Setup" = [
+    "setup/index.md",
     {"VPS" = [
      "setup/vps/system-requirements.md",
      "setup/vps/clone-repository.md",
