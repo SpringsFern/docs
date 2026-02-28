@@ -71,7 +71,8 @@ nav = [
     "customization/customize-replies.md"
   ]},
   {"Environment Variables" = [
-    "environment-variables/description.md"
+    "environment-variables/description.md",
+    "environment-variables/env-builder.md"
   ]}
 ]
 
