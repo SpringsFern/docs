@@ -328,20 +328,40 @@ function renderTags(wrapper, key) {
 
   const container = document.createElement("div");
 
-  input.addEventListener("keydown", e => {
-    if (e.key === "Enter" || e.key === "," || e.key === " ") {
-      e.preventDefault();
-      const parts = input.value.split(/[\s,]+/).filter(Boolean);
-      parts.forEach(v => {
-        if (!tagState[key].includes(v)) {
-          tagState[key].push(v);
-        }
-      });
-      input.value = "";
-      renderTagItems(container, key);
-      updateEnv();
+  function commitValue() {
+    const value = input.value.trim();
+    if (!value) return;
+
+    const parts = value.split(/[,\s]+/).filter(Boolean);
+
+    parts.forEach(v => {
+      if (!tagState[key].includes(v) && !isNaN(v)) {
+        tagState[key].push(v);
+      }
+    });
+
+    input.value = "";
+    renderTagItems(container, key);
+    updateEnv();
+  }
+
+  // Handle space and comma via input
+  input.addEventListener("input", () => {
+    if (/[,\s]/.test(input.value)) {
+      commitValue();
     }
   });
+
+  // Handle Enter (desktop + mobile)
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      commitValue();
+    }
+  });
+
+  // Fallback when user taps away
+  input.addEventListener("blur", commitValue);
 
   wrapper.appendChild(input);
   wrapper.appendChild(container);
