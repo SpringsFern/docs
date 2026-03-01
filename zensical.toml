@@ -35,6 +35,7 @@ site_url = "https://docs.tgfs.spri.in/"
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
 Copyright &copy; 2026 Deekshith SH
+<br><a href="/about/privacy">Privacy Policy</a>
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
@@ -73,6 +74,11 @@ nav = [
   {"Environment Variables" = [
     "environment-variables/description.md",
     "environment-variables/env-builder.md"
+  ]},
+  {"About Us" = [
+    "about/index.md",
+    "about/contact.md",
+    "about/privacy.md"
   ]}
 ]
 
@@ -328,8 +334,8 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/SpringsFern/docs"
 
 
